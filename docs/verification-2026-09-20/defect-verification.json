@@ -1,0 +1,32 @@
+[
+  {
+    "defect": "draw-does-not-add-card",
+    "expectedDetection": "G19",
+    "actualStatus": "FAIL",
+    "detected": true
+  },
+  {
+    "defect": "private-hand-leak",
+    "expectedDetection": "G29",
+    "actualStatus": "FAIL",
+    "detected": true
+  },
+  {
+    "defect": "no-idempotent-replay",
+    "expectedDetection": "G31",
+    "actualStatus": "FAIL",
+    "detected": true
+  },
+  {
+    "defect": "skip-does-not-skip",
+    "expectedDetection": "G10",
+    "actualStatus": "FAIL",
+    "detected": true
+  },
+  {
+    "defect": "order-detail-access",
+    "expectedDetection": "O08",
+    "actualStatus": "FAIL",
+    "detected": true
+  }
+]

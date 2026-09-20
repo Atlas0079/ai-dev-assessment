@@ -1,0 +1,61 @@
+[
+  {
+    "t": {
+      "$date": "2026-09-20T16:54:36.871+08:00"
+    },
+    "s": "W",
+    "c": "CONTROL",
+    "id": 23829,
+    "ctx": "conn6",
+    "msg": "Set failpoint",
+    "attr": {
+      "failPointName": "failCommand",
+      "failPoint": {
+        "mode": 3,
+        "data": {
+          "failCommands": [
+            "update"
+          ],
+          "closeConnection": true
+        },
+        "timesEntered": 0
+      }
+    }
+  },
+  {
+    "t": {
+      "$date": "2026-09-20T16:54:36.889+08:00"
+    },
+    "s": "I",
+    "c": "COMMAND",
+    "id": 4898500,
+    "ctx": "conn5",
+    "msg": "Activating 'failCommand' failpoint",
+    "attr": {
+      "data": {
+        "failCommands": [
+          "update"
+        ],
+        "closeConnection": true
+      },
+      "threadName": "conn5",
+      "appName": "",
+      "namespace": "assessment.orders",
+      "isInternalClient": false,
+      "command": "update"
+    }
+  },
+  {
+    "t": {
+      "$date": "2026-09-20T16:54:36.889+08:00"
+    },
+    "s": "I",
+    "c": "COMMAND",
+    "id": 20431,
+    "ctx": "conn5",
+    "msg": "Failing {command} via 'failCommand' failpoint: closing connection",
+    "attr": {
+      "command": "update"
+    }
+  }
+]

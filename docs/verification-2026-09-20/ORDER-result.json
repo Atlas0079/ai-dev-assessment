@@ -1,0 +1,441 @@
+{
+  "checkVersion": "2.0",
+  "task": "ORDER",
+  "status": "CHECKED",
+  "summary": {
+    "PASS": 20,
+    "FAIL": 0,
+    "NOT_RUN": 0,
+    "ERROR": 0
+  },
+  "cases": [
+    {
+      "id": "HEALTH",
+      "title": "GET /healthz 返回200和status=ok",
+      "dimension": "运行接口",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 19,
+      "evidenceIds": [
+        "EV-f002b127302343a1a3dcb9cffac76170"
+      ]
+    },
+    {
+      "id": "O00",
+      "title": "四种演示身份可以登录",
+      "dimension": "业务规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 84,
+      "evidenceIds": [
+        "EV-33ee8f5597114ceb9e4d944d4cf1e2ca",
+        "EV-1b90dfbfcf7b46ab98f9d22eb550d83d",
+        "EV-637956583f1b4682ad352268f08fabd6",
+        "EV-67054da8bc5a45b4969c8287fc39120b"
+      ]
+    },
+    {
+      "id": "O01",
+      "title": "正常accept",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 196,
+      "evidenceIds": [
+        "EV-64650aca57dd4496a70ac98c223681bb",
+        "EV-5ffdfb202076471da1e0dfece2c23df5",
+        "EV-37cc5362e2fc4dc3ac97963fffe7aa24"
+      ]
+    },
+    {
+      "id": "O02",
+      "title": "正常cancel",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 20,
+      "evidenceIds": [
+        "EV-82d0ffa227a7474e91a749d06fa4086c",
+        "EV-244e46b937d54584adacb076a10ff136",
+        "EV-85b71fa9f431421cb0fcb75c19a99b87"
+      ]
+    },
+    {
+      "id": "O03",
+      "title": "正常complete",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 86,
+      "evidenceIds": [
+        "EV-7db723f4b53a44c4a3ad24ad66e31708",
+        "EV-0a88386a21f34ff3b02e17484f2fa87e",
+        "EV-adbcf0db16f544a6a54d0207acd7d39e",
+        "EV-37b7d75fce144c7c8dd1286c1124b843"
+      ]
+    },
+    {
+      "id": "O04",
+      "title": "接单后取消拒绝",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 122,
+      "evidenceIds": [
+        "EV-a6b38cd20aa449e9b6d52be7d96913b9",
+        "EV-630662b1507342ceb367d4e3d77b8f1a",
+        "EV-2bde91820fb34123b2b449e9c3853694",
+        "EV-530a1d8e5f204fe48911756d90895c02",
+        "EV-6298fe9e671b4cd1acc79e1ce370aa68"
+      ]
+    },
+    {
+      "id": "O05",
+      "title": "取消与完成终态",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 177,
+      "evidenceIds": [
+        "EV-3a92681b9b324355821d16abeb40785c",
+        "EV-1b4e7b77f53749e697a354487cbae8cb",
+        "EV-dcd1a429a4a44f79a98b43bddbb2caff",
+        "EV-0079158b1cf0439bbc88a01b96681b25",
+        "EV-7da88304069f47f885bf5d823ff53b57",
+        "EV-1493dbb1b5a44889bbc180a9abc0bbb7",
+        "EV-f2f658d1e6594cae917f1d06f3a9bb7c",
+        "EV-490b9e1ba1b943ab968636e19cc9ae83",
+        "EV-d74d928b2a9b44c6a2fb31965cd548c9",
+        "EV-e3b7f1c225ac49f688f7c1ff684888e7",
+        "EV-30f67b79492f443581719326ec750791"
+      ]
+    },
+    {
+      "id": "O06",
+      "title": "非法迁移与重复动作",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 121,
+      "evidenceIds": [
+        "EV-f26b584d96124d91b2fa07124002ff7a",
+        "EV-0d7d6dfbc2cd4b6399b6ff7d6b215ae9",
+        "EV-8cb14c35cda84b949bc96e4a58be250c",
+        "EV-0b56c13545704f9bbef1cb69c79bc750",
+        "EV-f45b6e39e9e84f7a9f939c8ae4ac7189",
+        "EV-a4a233b81e2248e7a0707a98cf5254a7",
+        "EV-19cd12dc21e74739a8ab8701375a3c47",
+        "EV-3b365a7485374f37bd7ff298cae88002"
+      ]
+    },
+    {
+      "id": "O07",
+      "title": "不信任客户端价格",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 6,
+      "evidenceIds": [
+        "EV-d0c04005228d4934a5d08e3f16bb34af"
+      ]
+    },
+    {
+      "id": "O08",
+      "title": "详情和列表归属",
+      "dimension": "权限",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 46,
+      "evidenceIds": [
+        "EV-0927ea499fc24eb5bbcb6cfe34d1a39a",
+        "EV-026f3e6b4343443e846aff2152abb66e",
+        "EV-ed33a7a3d0184bd68e1704210235d748",
+        "EV-829b54a71f2f40a1af999e6cb63f7526"
+      ]
+    },
+    {
+      "id": "O09",
+      "title": "角色边界",
+      "dimension": "权限",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 128,
+      "evidenceIds": [
+        "EV-d16429a3faec479c8647fd940a8b56da",
+        "EV-67ebd24d509e4385bf530b4c07556a00",
+        "EV-99ececb146b6403a8731c82b5f79f48e",
+        "EV-1a1165fa6b404a31b6a739fde615b2c0",
+        "EV-0cbfcadf50254b7ebde71f841564cbc2"
+      ]
+    },
+    {
+      "id": "O10",
+      "title": "仅接单人完成与查看",
+      "dimension": "权限",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 139,
+      "evidenceIds": [
+        "EV-4c6d24c576f141dd908a10d2c6e577d6",
+        "EV-a1d24b3a279c423199a3a2d933d775bd",
+        "EV-8936ea4135dc4fba9ad84a374af6e67a",
+        "EV-3f5ebf83950e40cb8d8917daa4d30b62",
+        "EV-66867b11c5534db8a5ade54915f10da1",
+        "EV-5f0eadb5c86d4195b008748ddc12c6a5"
+      ]
+    },
+    {
+      "id": "O11",
+      "title": "重放与载荷冲突",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 90,
+      "evidenceIds": [
+        "EV-1820764b6b31479b840eeffe46d6d42e",
+        "EV-8d1a89991c2944179cebd326a6ea3796",
+        "EV-e976761b595c449e96236915bd3e745a",
+        "EV-141df279dbe943a68fb7a610bc3daca0",
+        "EV-86f0c65d5f954e3eaa9cd855a3014d70"
+      ]
+    },
+    {
+      "id": "O12",
+      "title": "两人抢单10轮",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 462,
+      "evidenceIds": [
+        "EV-687c12d64d3b4e93b97cf9fd8e24aafb",
+        "EV-c3e94c68132341639024dd420dcaa186",
+        "EV-626132bef20b4574b897b6e8d8b5c2d9",
+        "EV-d0d61c2f92ce408ebfc559e1e2097640",
+        "EV-6ef93005e4514956b98cdc36f6daf66c",
+        "EV-cd6f53becd754336ace01d92722e313d",
+        "EV-73f67b8d78f240498c3b707dfdd45889",
+        "EV-5554cfb7db4d4e73ab2e67db93081a21",
+        "EV-f2e34219b6844e20b93e3d75b2c00782",
+        "EV-179e4c6029304443ad004cac73b0dcbb",
+        "EV-fd8a5417b98d4ca98a9b333afbf70f24",
+        "EV-538d81e1c4fe470f81a405e10e11cee8",
+        "EV-1626a357167648a4a34e40fc3e889dfb",
+        "EV-50b49d2f811c47d781fe68145856aeb2",
+        "EV-58cdc5fa822b43f2a89baf53837c1e03",
+        "EV-1fdf259ffe7445c8a25ee13701ff85fb",
+        "EV-f2ed0de4d1f64425b07289cda0b9236b",
+        "EV-41d618cabbe1453ab7e235841d4e262d",
+        "EV-6f6994b6a88147f4ad2bfd0e75a58ddd",
+        "EV-459278ba9c9c49ca9cc66dcab5d4f603",
+        "EV-90733c45345b4a2cbbc657719481ec1c",
+        "EV-604d72654ae04c8ca651ac2d0519daa1",
+        "EV-c052ff37d5cf47eda63934c43ffeb3fd",
+        "EV-afac228558214580acaf4b4f9e864e5a",
+        "EV-30b16160922a4617805cfae67475abe2",
+        "EV-1d8c518eb59f416d99405c053610bc69",
+        "EV-c3ff7b75365c4a18b42d7735cddd6414",
+        "EV-b4aeae8454fa4877839141cd1f8d4e2f",
+        "EV-54f5c14a968a4a488bbdd5560283c38f",
+        "EV-46f18f6ca6804b30a8a97f2dad28174f",
+        "EV-38ce63781dca417dba655d21e871946e",
+        "EV-49e938c3089349aa8afbcc2b4a3baca1",
+        "EV-142582a59a744dec8677e0f8a65b08dc",
+        "EV-cb6d3cdf8db9445093e896d451e0236e",
+        "EV-3f36fb78a29b4f41983ea40511217897",
+        "EV-2927f5c3a1754fc89a42b1a8001945aa",
+        "EV-32231e3ccbb547af844b6a18d8dde8d9",
+        "EV-897b2e1e2d6442778303aa8c8dd7eaa4",
+        "EV-e070bd3f79b847cc9bebf980632f2fe2",
+        "EV-be1662eb14fd478183d77ce8324d58e4"
+      ]
+    },
+    {
+      "id": "O16",
+      "title": "接单与取消10轮",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 464,
+      "evidenceIds": [
+        "EV-7227aded35eb4b709bdf1619926675b3",
+        "EV-6c3d2f8f6cfd4cdf9defadb4e5f637a6",
+        "EV-966f9cfc6394453183930dd07b1a6152",
+        "EV-a69d55043d98477792ea8db6a27f441b",
+        "EV-2ff23ed0119a4273a2bd22b76a784cfb",
+        "EV-fe27aa10702946c2abae835b8de6c608",
+        "EV-92ddc813aecf4633be4039be064ab876",
+        "EV-7d207ddf73ee4607a47ade0e08b75660",
+        "EV-adcef8b2c3134bf6afb47e0b6bd6e2a4",
+        "EV-be400530fabc439e96a83dbe2d824d2c",
+        "EV-a224e82f6e66498ca4e401b518d25d1e",
+        "EV-17d488589b654f7399c84c1b409fb118",
+        "EV-f97cda16775a4dfa888d00fa560b3d6c",
+        "EV-8298afcad58041109bd89ee978c9442e",
+        "EV-7392e72b94484bafa7ce61541111fab9",
+        "EV-4e48b3e495764dd4b1bfe4047d6a97b0",
+        "EV-b6d3958e707a4279be89b5ad947f4421",
+        "EV-51d0e9da250940dfbbfdc13081c3ff24",
+        "EV-bf0054b620534f619f5ffc242426e757",
+        "EV-0b49d2b5f82d4766b2ca4be909c9abf0",
+        "EV-63a3d94313434b36b8ab51d9dfb6353e",
+        "EV-ef0d729b8a164f00ad7f4b923d80454a",
+        "EV-78a919fc981b4c1e9c6cba5c3e4a0004",
+        "EV-f876cdebbb9949d7ac1d1ca9fdc45efd",
+        "EV-7462517c6723455698fbaaed90a85440",
+        "EV-9adf70d44d2e4d0f81fb537855a7fe99",
+        "EV-ae70d9c37e76492ba4a9ab7ea43c2378",
+        "EV-b0139063cb0f4176829a355248e73e45",
+        "EV-be1d7c8b15c84ebda5a12fe37e19e217",
+        "EV-3570817a9df24d12b18c7f874eb3be6c",
+        "EV-c556a64403744b548477d6000021167e",
+        "EV-6c9e130bb8d949f9aac54cc6c308aa81",
+        "EV-726d32cd67354fc3b0f81d7f8798118f",
+        "EV-baf835e823644c6bad0d8b7a4dbd63b3",
+        "EV-7af4e13f933446e7ada03f9dc33d4cfa",
+        "EV-984e9db9ec2c4bcba70a3ea6cbb014f2",
+        "EV-4480def69a864dbb8c763bfce830d305",
+        "EV-3986e214463040a5af7b8b834899d49a",
+        "EV-e1bc8dc647274c1494140d53149fc31f",
+        "EV-482a424de06440878131cd19d3692f21"
+      ]
+    },
+    {
+      "id": "O13",
+      "title": "不存在订单返回404",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 30,
+      "evidenceIds": [
+        "EV-0b9f2bb6301c46949aa365a2550ebf0b"
+      ]
+    },
+    {
+      "id": "O17",
+      "title": "数据库写入中断一致性",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 100,
+      "evidenceIds": [
+        "EV-cfcdc33c4f2d471abf6ea5883125510a",
+        "EV-0ceb93083f7145789403f7a035c4f243",
+        "EV-91fa9db0b5f249a58511c8e33ae5285e",
+        "EV-494fb40dd1774aa4b129c5f6fb3db245",
+        "EV-c01414a4058c43718db9259b3a1a99c2"
+      ]
+    },
+    {
+      "id": "O14",
+      "title": "服务列表与创建查询回归",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 69,
+      "evidenceIds": [
+        "EV-af424096a3f44f07a858488b8c7942e8",
+        "EV-19920dcc5e9c4ce388eb880d95764ae3",
+        "EV-5378f8135b6945718ff0cd86ea68be76"
+      ]
+    },
+    {
+      "id": "O15",
+      "title": "分页无重复",
+      "dimension": "订单规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 426,
+      "evidenceIds": [
+        "EV-d125593534864cba8ec77b1a2d81d32b",
+        "EV-a21fe360373b47f9a2f0d22a17ccd6b4",
+        "EV-d5156400eebe48e69f9feafc8675b11e",
+        "EV-104e5067e5f14c81834169ab85a3897f",
+        "EV-6bf8259cb41d47e0a851d7881897ed2f",
+        "EV-d99f46e3d95f4656ac46296b6eba15e5",
+        "EV-61d69d4af1624a53b86a68a742bd618d",
+        "EV-49df4078c3fa43e39b1e50f3a72465d3",
+        "EV-5c8e46a7bc204399b879acd11d6aa811",
+        "EV-c1e8d0bae88a416d97628d9274f01c17",
+        "EV-7cf5553c042c431f9d9875344ee478e4",
+        "EV-28c808e61d874dd88a4759a3c1a7cbbb",
+        "EV-f2a27ff52e2b4955b2e2bbb1b5cc18b1",
+        "EV-5a22df77ece74c159e8d393080a670e7",
+        "EV-934ee0dd16294c1b83eb27f3ef720e25",
+        "EV-bb95b96318184b7b80a082bc46b8845b",
+        "EV-f3cc86a300d34e52bd94caaa37a61dd6",
+        "EV-066ef671af234901aa75298c4e0c3eba",
+        "EV-5c8c6844481a45b49a2fca602ebc2821",
+        "EV-69b7585768014d4e8d3e73504a6f042a",
+        "EV-5dc33977c71a4dbfa632225c26272704",
+        "EV-e98833e783ef4c2db9e023d89823ec3d",
+        "EV-10eb645e97e945899214e34b5b727a56",
+        "EV-31bdf0ac22104dc999385796b366c498",
+        "EV-6eeba025a95241c98b9019beaea75ef5",
+        "EV-ba6684ab106c4fbdac784cc74070a57f"
+      ]
+    },
+    {
+      "id": "O18",
+      "title": "重启后状态保持",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 3418,
+      "evidenceIds": [
+        "EV-754acf54c03c4af597f8ec5ce75a808a",
+        "EV-437298f1956549d3a98ef122dfb67df2",
+        "EV-95918e8569fe45deb0e22b4edf5985da",
+        "EV-8d2abc314efb47b9be8ad13f803242da",
+        "EV-b4f8b206031243cf87e2bbbbbca0c933",
+        "EV-375d8e0e631b4922bdb553349ce64129",
+        "EV-864ee256c5a34919a1f2d59867b18897",
+        "EV-f23a12a7ca8d4f43a26897a457eb81e5",
+        "EV-3a5cac1fa02044f68fbbc1e32829c1c6",
+        "EV-cd631e987f484f3b85e2c168cbc08827"
+      ]
+    }
+  ],
+  "notAssessed": [
+    "综合分数与录用建议",
+    "AI使用能力和开发速度",
+    "代码质量与可维护性",
+    "页面操作、刷新同步和体验",
+    "容器构建可复现性"
+  ],
+  "execution": {
+    "mode": "trusted-reference",
+    "storage": "mongodb"
+  },
+  "dimensions": {
+    "一致性": {
+      "PASS": 5,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "业务规则": {
+      "PASS": 1,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "权限": {
+      "PASS": 3,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "订单规则": {
+      "PASS": 10,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "运行接口": {
+      "PASS": 1,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    }
+  }
+}

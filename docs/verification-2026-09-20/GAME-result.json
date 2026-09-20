@@ -1,0 +1,629 @@
+{
+  "checkVersion": "2.0",
+  "task": "GAME",
+  "status": "CHECKED",
+  "summary": {
+    "PASS": 33,
+    "FAIL": 0,
+    "NOT_RUN": 0,
+    "ERROR": 0
+  },
+  "cases": [
+    {
+      "id": "HEALTH",
+      "title": "GET /healthz 返回200和status=ok",
+      "dimension": "运行接口",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 15,
+      "evidenceIds": [
+        "EV-06c400c68c9f480a8ed1c1e6f1c04f10"
+      ]
+    },
+    {
+      "id": "G01",
+      "title": "测试牌局注入及完整状态往返一致",
+      "dimension": "数据契约",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 47,
+      "evidenceIds": [
+        "EV-17924ceb8a964d83b4eae1c079c3afeb",
+        "EV-4060916032ab4f72908ad7b43c2b0b7f",
+        "EV-f0194dde282f49ceb66f2db99bb9b738",
+        "EV-12617dbd6efb4bf6b9f1792221fa3ce9",
+        "EV-fbe52001297b4ed3bdca2e0da17323df"
+      ]
+    },
+    {
+      "id": "G02",
+      "title": "测试控制接口拒绝未授权及普通玩家",
+      "dimension": "权限",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 67,
+      "evidenceIds": [
+        "EV-e6810974e0504de692278530bf39cb5e",
+        "EV-dd2a9576ffde42e39326c56abbde4f09",
+        "EV-eff0422e67f344319422310cdffa5a7b",
+        "EV-fd207dc832c64d8c858f58ae8adc79b1",
+        "EV-7ee96969f20d475d859b3717f00f64db",
+        "EV-3119fd6ed89c4021b3aa827113169dcf",
+        "EV-6d768541b7df46e79072d1b6748f5aa4",
+        "EV-ad50c11566884d98bf6eb76321549d11"
+      ]
+    },
+    {
+      "id": "G03",
+      "title": "10种非法牌局结构被拒绝",
+      "dimension": "数据契约",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 86,
+      "evidenceIds": [
+        "EV-b30c0023291b4317adb16edc34708adf",
+        "EV-dd6877da35744651b7c2ccbd4798caf7",
+        "EV-76f56c098c9a4dfc8490d517a91192b4",
+        "EV-9c1beb244d064b56a63b36d9bbc7967d",
+        "EV-d05db16dca5a4e2f9ec168c12bf9df50",
+        "EV-885d5f9505dc47fbb7e1e836afc2668e",
+        "EV-f427fc11b6d04fda8dbb5e99ba971795",
+        "EV-fd2acf9533ad4890b289f0a528c38f07",
+        "EV-7ff6330828a44db6ab12805afec5ecb4",
+        "EV-a520bd5ef1c3440e871a02d3654391b2"
+      ]
+    },
+    {
+      "id": "G04",
+      "title": "2人正常开局：60张牌组成、唯一性及每人7张",
+      "dimension": "开局",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 123,
+      "evidenceIds": [
+        "EV-c1f88fd33f104ab7bf2a874d43a74b92",
+        "EV-57dbcdb4ab544c1eb1f885230bc56334",
+        "EV-361462dd85004ec08c45a6a87ded626c",
+        "EV-90666748fdd74e5abd2eaa94f12d26e4",
+        "EV-4cb61786c2a347359a51d79a2536d1e5",
+        "EV-72421577111f44c08efc966e2aec661e",
+        "EV-3a5f2ad9abea465cbc1200371dc1d7ee",
+        "EV-1ac166c45b3947b49e3ecfe6ba407c60"
+      ]
+    },
+    {
+      "id": "G05",
+      "title": "4人正常开局：60张牌组成、唯一性及每人7张",
+      "dimension": "开局",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 200,
+      "evidenceIds": [
+        "EV-b23abde070bd4bd98d42dfb6c0792c36",
+        "EV-f13982731bcc437d81c25cb8da1d2125",
+        "EV-f83f000ffa9346539099bae1c78a1a1d",
+        "EV-92b37ac7739f4c79971b96fb51788e8b",
+        "EV-bb7d30943462400ca493ec3492b58051",
+        "EV-23c7102f2e69477fa8852f69bd851a44",
+        "EV-b31c93a8ba94422ea574b06909b03868",
+        "EV-51959838cd3a4c018b72a10e931fba50",
+        "EV-dd09814ff0464e95bb04059b69c39a6d",
+        "EV-ac45481518e5495fb78a60d517ccb35e",
+        "EV-1689c2e0fcbe4f4bb25bab0c45c66e1e",
+        "EV-27ff729fef2340dcba2a90c2fe64e71e",
+        "EV-2379522d380748b1965a79be74568049",
+        "EV-b28a2b30dfbf4f7a879977b5b229ad38"
+      ]
+    },
+    {
+      "id": "G06",
+      "title": "人数、准备、房主、重复开局及加入限制",
+      "dimension": "开局",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 213,
+      "evidenceIds": [
+        "EV-2343158819714ad1803e2ee4d5314ac6",
+        "EV-acd643fdc6164f72ad4b1c47346ddaef",
+        "EV-42e8854866aa45e79fed772737983032",
+        "EV-79162ad0b0b64a3ebbdbb5430ce56a7c",
+        "EV-e41f27bf4ce64006a48e5580056a21a5",
+        "EV-9669b790aeb248978d9f4aea5276ee37",
+        "EV-2861c975bbbe44a88590662951431b99",
+        "EV-598f950e4bc44f54aaf47f56d99b5f53",
+        "EV-04400aa3b0e242e685023f0d28a61a1a",
+        "EV-04602e29252e42e881c2ee55b822dbe4",
+        "EV-bba00ddb5d894818ae10c6e3013db5a7",
+        "EV-af9de3d03b5b4b089cd3eb97ed7c3dc9",
+        "EV-9ddaf4cd68c24e9983c30ab0ec2d8cbc",
+        "EV-17dd26ec4d344bc18fd44e7a471a8ec9",
+        "EV-432a69a24dfe44a4afcf9b9bd25fd7f2",
+        "EV-a9392a7c67ad466cb7d2dbd1d1c7a204",
+        "EV-3f938f9c41da483a9aa4efcfd9ef0d54"
+      ]
+    },
+    {
+      "id": "G07",
+      "title": "准备和开局请求幂等",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 108,
+      "evidenceIds": [
+        "EV-94da0c2fed6d4e65b6fd748bfbdcb98a",
+        "EV-2417a050707d440883099a8b7e78bbed",
+        "EV-640f188a28d94aad8a51ea79a1054e90",
+        "EV-e5fd6cd7641e489db8d52e42e518b9a9",
+        "EV-5e5c6ead661e4471b0c215527ebacff9",
+        "EV-7a6b0dbff02f4b83a3765b9b856afa81",
+        "EV-faca1836ce434fe891d12fcb47fefebe",
+        "EV-a72306b9ac234742aebd15e907885958"
+      ]
+    },
+    {
+      "id": "G08",
+      "title": "同色出牌：移牌、轮转、revision及守恒",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 47,
+      "evidenceIds": [
+        "EV-67c1676b613b4b92be4b058198abf655",
+        "EV-1c7403c1a71d405782ad45b294f95567",
+        "EV-91d86667a159490385ca199dc81b3208",
+        "EV-64a410bdbc724746b2889cf358222cfb",
+        "EV-6974e7ae080e4446afdfbfe5c7f2ad66"
+      ]
+    },
+    {
+      "id": "G09",
+      "title": "同值异色出牌",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 75,
+      "evidenceIds": [
+        "EV-2571713c5bd84537a029c49c10f17136",
+        "EV-0950b1f0a0834e87bbfe19b12cccf5d3",
+        "EV-e6f89e7fc3a249089db666f23082ea78",
+        "EV-a114f74b20c448ae8cfb9630ea68c4dc",
+        "EV-11c3cd26b0854cdfaac96587a57e15cb"
+      ]
+    },
+    {
+      "id": "G10",
+      "title": "SKIP跳过一人",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 76,
+      "evidenceIds": [
+        "EV-584ba503ae8a40d5b7e13970abba3faf",
+        "EV-3decf1ef68584394976f2d21ee5b2359",
+        "EV-3f44fa497ebd459797eacfb6210dae88",
+        "EV-bbf8068a86944f888a499b25f07664da",
+        "EV-ec914054a6464269bcfb1688e6b9e5be"
+      ]
+    },
+    {
+      "id": "G11",
+      "title": "三人REVERSE改变方向",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 62,
+      "evidenceIds": [
+        "EV-e3cbbc8f219441c4b8973164736e5819",
+        "EV-3b02e4bccc8e463887c376d74ea627e5",
+        "EV-5c76cc297fd1468097f56ef225dbf520",
+        "EV-9743c47f563549f6850cb0080a2a2168",
+        "EV-0d0ad55b829c4807b826e14dabdb0637"
+      ]
+    },
+    {
+      "id": "G12",
+      "title": "两人REVERSE回到自己",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 50,
+      "evidenceIds": [
+        "EV-13cea946e9074f538c96641d3c245a04",
+        "EV-0470336517434a7d938c2537b52074bb",
+        "EV-2c421853dea947c7ad1b23aabea114db",
+        "EV-3cea35cd6ac847e6969451444dff1e48",
+        "EV-76133340013e4b99bb51b2da51abcb96"
+      ]
+    },
+    {
+      "id": "G13",
+      "title": "DRAW2实际补两张且跳过受罚者",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 88,
+      "evidenceIds": [
+        "EV-38e34fb403b6452bad8863358582c751",
+        "EV-c8791c6abc6b40a1a7d2c4004cfdb22d",
+        "EV-d9166a53605842549bbfe88cf68590e1",
+        "EV-ea021634e24f4332b7ac1c5298ba943a",
+        "EV-44b35f51122945b6ab81554fc90a72a4"
+      ]
+    },
+    {
+      "id": "G14",
+      "title": "两人DRAW2回到自己",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 21,
+      "evidenceIds": [
+        "EV-71187c3f43e34707877c276f558ea483",
+        "EV-6d871514c1a049d9a9bd2d851872c618",
+        "EV-c9491d6453434797bfa2eceaf409abc0",
+        "EV-544470877c4a4f94822071fe453bf5e8",
+        "EV-e8999b484e584602a989bac54a33c269"
+      ]
+    },
+    {
+      "id": "G15",
+      "title": "WILD指定颜色",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 48,
+      "evidenceIds": [
+        "EV-1ddb2c83f4574e76a72acf97794e5c3a",
+        "EV-65b27213100344759b8e7f9084d95ad0",
+        "EV-ac3c352bdab549d9b61aece1dd7a8df2",
+        "EV-c844d0782eb242759e70729b86d5411e",
+        "EV-46a94664bc4b4042b5d145d36a99a88c"
+      ]
+    },
+    {
+      "id": "G16",
+      "title": "逆时针出牌轮转",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 32,
+      "evidenceIds": [
+        "EV-fdcc9912de6d4712953948007e1c66dc",
+        "EV-1d668c38802b4360a94c1b0e26d12c87",
+        "EV-ed7df7a8c00d4697a79e17093c1875bd",
+        "EV-f02b5f610e94471086d49519a16b2557",
+        "EV-d2ac028edb0d4f838466670c5581e2ed"
+      ]
+    },
+    {
+      "id": "G17",
+      "title": "最后一张数字牌产生胜者",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 51,
+      "evidenceIds": [
+        "EV-33c271177df043d9bc18bcb30693432d",
+        "EV-1403af7b0d71438094a52c35eed635c6",
+        "EV-dd7ad39ed8f94d4db6822751807f98ef",
+        "EV-f4bd81db46a744f795bf52a636fe75e0",
+        "EV-ecaace5bd441435f94a249d69db64a55"
+      ]
+    },
+    {
+      "id": "G18",
+      "title": "最后一张DRAW2先处罚再结束",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 45,
+      "evidenceIds": [
+        "EV-d37e2934ff37473a9a7fe70aa15865b7",
+        "EV-b19c041dc6504d00a9708aa09b4e12cd",
+        "EV-a70465d97ded4f12a593f7f1683558bb",
+        "EV-7e91c22aa8044179b3774f4581165131",
+        "EV-edf6e6440b3548c483cf2ce524ed4265"
+      ]
+    },
+    {
+      "id": "G19",
+      "title": "摸牌：确实增加一张、牌库减少、结束回合",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 19,
+      "evidenceIds": [
+        "EV-775f36705364430bb93cfb3b341e5218",
+        "EV-85df613dc7bf40a2be068207fddde9f5",
+        "EV-0e6ae77a28904ba482543c1745d1dd86"
+      ]
+    },
+    {
+      "id": "G20",
+      "title": "耗尽牌库回收弃牌且保留顶牌",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 28,
+      "evidenceIds": [
+        "EV-cbf73f6099be46a1b7521361dab3147c",
+        "EV-84352ca7517d453dbbb7e1a6536774b5",
+        "EV-695c56da8c6e486ea2f915dc5f31eedc"
+      ]
+    },
+    {
+      "id": "G21",
+      "title": "无可回收牌时摸牌仍结束回合",
+      "dimension": "游戏规则",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 43,
+      "evidenceIds": [
+        "EV-2166ebbc88d14f8597fb9571f48c68fb",
+        "EV-83e5caeacf744bf19ec27ce158a1e882",
+        "EV-2ed0880b9c0a423f9995233e74b2028f"
+      ]
+    },
+    {
+      "id": "G22",
+      "title": "不匹配牌拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 44,
+      "evidenceIds": [
+        "EV-3d7ee26d3b30470fbef6d9c13ceb357f",
+        "EV-2a8228f825924379bf6aec5245c1405b",
+        "EV-280814c370a54c6cb8476b249d3ae1a6",
+        "EV-947f63ea5ffc4604bb67453ca7c52a93"
+      ]
+    },
+    {
+      "id": "G23",
+      "title": "不持有的牌拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 46,
+      "evidenceIds": [
+        "EV-8fb2250d58e741d584cf51a42031251f",
+        "EV-3a885329468649eba59f63aaa0bdc3c8",
+        "EV-ebf66d2d432a4839b1565579c1ee58ab",
+        "EV-7dbad918d3c940b9ade83f04b2bcb32e"
+      ]
+    },
+    {
+      "id": "G24",
+      "title": "非当前玩家拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 60,
+      "evidenceIds": [
+        "EV-c06548da9bb54236bce8d21518d5e700",
+        "EV-31a6bdb1bfe4438da0a2daa113e6d261",
+        "EV-0621ea15095d4ad6a46638a54184592f",
+        "EV-0dfe4d946a2046b786783693844aa768"
+      ]
+    },
+    {
+      "id": "G25",
+      "title": "旧revision拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 63,
+      "evidenceIds": [
+        "EV-be2e18e35a784763b814ccc642396968",
+        "EV-e3ea35824c4b4d6e86f5384f887fb6a4",
+        "EV-9ca863cd469d4351a38381ec20ff4389",
+        "EV-40642519d36e4d05a44cf0ce952b5755"
+      ]
+    },
+    {
+      "id": "G26",
+      "title": "WILD缺少颜色拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 9,
+      "evidenceIds": [
+        "EV-f99c7a228df64ac09c516a105f473b7b",
+        "EV-67d04105796d4359905d29dd9b901306",
+        "EV-cd4bf5c2d31d4a189f42642f61262ca0",
+        "EV-2da83f6b2c6947308639ce81bc68f454"
+      ]
+    },
+    {
+      "id": "G27",
+      "title": "未知动作拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 51,
+      "evidenceIds": [
+        "EV-30ba38b81e914ce4a6173165272568b2",
+        "EV-7118cd72e1f74094be8432b3f2a208a3",
+        "EV-ba25eba2b9e744f2b5e965ad95378dee",
+        "EV-32cd60b72dd848668f2055ab1fb25b5e"
+      ]
+    },
+    {
+      "id": "G28",
+      "title": "结束后出牌和摸牌均拒绝且状态不变",
+      "dimension": "拒绝与边界",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 186,
+      "evidenceIds": [
+        "EV-a125d7cef54b413ea42e0afdaba2cf80",
+        "EV-47e1d151e5a14e398db3889ecc5f880e",
+        "EV-ee67f5d4e5914672ab896fc03e809fac",
+        "EV-099b4dfa2b9949fb8ebf2a2aeadb5a13",
+        "EV-4231aeacc06a4fc6bb09078c579009a5",
+        "EV-9159ea1d9fb448c9ac67d7cac7ffa96c",
+        "EV-ca9be1465a8e4aa7b764a10e1d328c4d",
+        "EV-6ca16b0baa8b44958d431d6b1dc44515",
+        "EV-91cbb4d31bf54c789b6972de297ac29b",
+        "EV-5e9d3114885a4ff0af5e87428ecea9c8",
+        "EV-d3a8b21fdb8d46f7814c4f8e2458a38d",
+        "EV-1b9e540d490c48a599861053cced9e18",
+        "EV-be857654e30041c89e2ed62552ca5e36"
+      ]
+    },
+    {
+      "id": "G29",
+      "title": "公开状态严格字段契约及手牌隔离",
+      "dimension": "权限",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 10,
+      "evidenceIds": [
+        "EV-ccf80a8e5eb64824bf8b5544647f585c",
+        "EV-9f5654b1bab44665a155ebb7bbe93bb2",
+        "EV-e925e5074d58450587fee2b260d5c896",
+        "EV-2c027577780c44a9aaefdb0225726b0e"
+      ]
+    },
+    {
+      "id": "G30",
+      "title": "伪造令牌及跨局同名玩家隔离",
+      "dimension": "权限",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 112,
+      "evidenceIds": [
+        "EV-998bc7abd0444921bac38f7290a92419",
+        "EV-90a084d69295481c9dacc72aaf18dd86",
+        "EV-6f99572d8746445fb0f4a15a73836aa0",
+        "EV-406db203244a4e8486060fb9441379c6",
+        "EV-4b9f979337a24294a3cf05de5c31b8c9",
+        "EV-4f89fca25379443ca5f27d7afb1e6955",
+        "EV-68b5402512d04952832495225d3f32d7",
+        "EV-2f57d18a5e1042cb93c278f46c542254",
+        "EV-643dabe5fb2b41448f43a5a0513c5207"
+      ]
+    },
+    {
+      "id": "G31",
+      "title": "动作重放与冲突均不重复变更状态",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 46,
+      "evidenceIds": [
+        "EV-f6e7875ea63e4660aee8d766f55cfbfe",
+        "EV-cf8084772eaa476c934af559fd19545a",
+        "EV-ac08e70e6cf44d68bdb11f0b0b0e527f",
+        "EV-74f8aadb9e364801b471266357bcae43",
+        "EV-8ff86b246deb4163ad5fed40b761e808",
+        "EV-b9484bae80c14cb88253f6de3a22ff3e",
+        "EV-01957e1ec5684ba0acf819d16aa390bf"
+      ]
+    },
+    {
+      "id": "G32",
+      "title": "10轮并发动作仅一次生效并验证实际手牌",
+      "dimension": "一致性",
+      "status": "PASS",
+      "detail": "本用例的断言通过",
+      "durationMs": 341,
+      "evidenceIds": [
+        "EV-4dd390f7815c46379b2c455a482ac1cc",
+        "EV-21e2e2e2220a42aeb9b6ba001dfa3b59",
+        "EV-fff074e4848846f9a22364cfdc8d0276",
+        "EV-bbbde7a8af4d4eaab20e91a06d092bb3",
+        "EV-7ae31aefa58e463f8cd6614a0f689c20",
+        "EV-2850cc8e621040bdb758e4b3fe4b1469",
+        "EV-956fd3df2bd143aea19f4b5d8bd9f3c3",
+        "EV-1f4680a73b254b958ab8452d5d6f01e0",
+        "EV-144eb06f509e41a4a4c349fcea9f5ea2",
+        "EV-fb5700c846ad4288983f428ec4018709",
+        "EV-db87b8fde1f34a9796af8b0af2a030ab",
+        "EV-b607634ad5924df8be22f95f5a821077",
+        "EV-8ad577562f2b4143b51f48b05cbe593c",
+        "EV-6173f369ac6c440ebc3107ca9a1b3b89",
+        "EV-5c58fefa752e48c2a1affa864e1325a8",
+        "EV-d4003cd0f1ff49aeb2b0aea009c146a4",
+        "EV-584afedf4b0a4a89a5052dafd7c14f2b",
+        "EV-6b08d7c8e39743c59fbb77f7d034dec1",
+        "EV-27578515468241d183c5add72f995de3",
+        "EV-bfbd67a8f2794f98a873bfbe18b9f964",
+        "EV-c22cbf5e3bd5401b9a343577ba01347e",
+        "EV-ec4ccf2a953549f0a268c0df58e9db95",
+        "EV-efc19d4139a94a66927c72055a55af68",
+        "EV-131b208c9f9747fab8438add2a1dd35d",
+        "EV-d8c06b83f6d04fcaab72f5e315599834",
+        "EV-91dc4eca75f146899c44a191636912ca",
+        "EV-a92a4790ecaa46b49e220dcd61f1e086",
+        "EV-b650d51bee104f4eb79c34a4ab44cb42",
+        "EV-0de381485ca04c7b948d5caf761ad472",
+        "EV-03908b8e9cad48d8900994a037b13c23",
+        "EV-f722c509e71341d4b85f599623853e59",
+        "EV-eb3b3473e15c47bc90e9cab0d50a5db6",
+        "EV-febc9e014528487fa05116fbfd0e3478",
+        "EV-d324f374205942548f7108890f1460a4",
+        "EV-e3622c20242b4473ae648c34c9f33c25",
+        "EV-a8d16e67679348d4b1f17165696acea1",
+        "EV-6c5b9919f5dd4105a107eb7c597b8668",
+        "EV-efa3d0faf5594e1f9558d641060a147a",
+        "EV-2d9042e472ef4b41bbaee2aa6a86ee11",
+        "EV-365bb8f97ce94f81a2fd17540a4df85e"
+      ]
+    }
+  ],
+  "notAssessed": [
+    "综合分数与录用建议",
+    "AI使用能力和开发速度",
+    "代码质量与可维护性",
+    "页面操作、刷新同步和体验",
+    "容器构建可复现性"
+  ],
+  "execution": {
+    "mode": "trusted-reference"
+  },
+  "dimensions": {
+    "一致性": {
+      "PASS": 3,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "开局": {
+      "PASS": 3,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "拒绝与边界": {
+      "PASS": 7,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "数据契约": {
+      "PASS": 2,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "权限": {
+      "PASS": 3,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "游戏规则": {
+      "PASS": 14,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    },
+    "运行接口": {
+      "PASS": 1,
+      "FAIL": 0,
+      "NOT_RUN": 0,
+      "ERROR": 0
+    }
+  }
+}
