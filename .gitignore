@@ -4,6 +4,7 @@ __pycache__/
 target/
 .env
 .runtime/
-dist/
+/candidate/*.zip
+/candidate/release.json
 node_modules/
 releases/

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>招聘评测</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <h1>招聘评测</h1>
+      <div class="header-actions">
+        <a id="download-pack" class="button secondary" hidden>下载发题包</a>
+        <button id="logout" class="quiet" hidden>退出</button>
+      </div>
+    </header>
+
+    <p id="global-error" class="error" role="alert" hidden></p>
+    <section id="login-panel" class="login" hidden>
+      <h2>登录</h2>
+      <form id="login-form">
+        <label for="password">访问口令</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <p id="login-error" class="error" role="alert" hidden></p>
+        <button type="submit">登录</button>
+      </form>
+    </section>
+
+    <div id="workspace" hidden>
+      <p id="environment" class="notice" role="status" hidden></p>
+      <section class="upload-section" aria-labelledby="upload-title">
+        <h2 id="upload-title">上传答案</h2>
+        <form id="upload-form">
+          <div class="field release-field">
+            <label for="release">题包版本</label>
+            <select id="release" hidden></select>
+            <input id="single-release" readonly aria-label="题包版本">
+          </div>
+          <div class="field file-field">
+            <label for="answer">答案 ZIP</label>
+            <input id="answer" type="file" accept=".zip,application/zip" aria-describedby="answer-help" required>
+          </div>
+          <button id="upload" type="submit">上传并评测</button>
+        </form>
+        <p id="answer-help" class="scope">文件名：姓名_报名手机号_v1.zip；补交递增版本。</p>
+        <p id="upload-error" class="error" role="alert" hidden></p>
+      </section>
+
+      <section class="records-section" aria-labelledby="records-title">
+        <div class="section-header"><h2 id="records-title">评测记录</h2><button id="refresh" class="quiet">刷新</button></div>
+        <p id="service-error" class="error" role="alert" hidden></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>候选人</th><th>提交版本</th><th>状态</th><th>上传时间</th><th class="action-heading">操作</th></tr></thead>
+            <tbody id="records"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="report-panel" aria-labelledby="report-title" hidden>
+        <div class="section-header">
+          <h2 id="report-title">结果</h2>
+          <div class="header-actions"><a id="report-download" class="button secondary">下载报告</a><button id="close-report" class="quiet">关闭</button></div>
+        </div>
+        <div id="attempt-field" class="attempt-field" hidden><label for="attempt">执行轮次</label><select id="attempt"></select></div>
+        <div id="report-content"></div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "platform": "linux/amd64",
+  "python": "3.13.13",
+  "java": "8",
+  "springBoot": "2.1.13.RELEASE",
+  "maven": "3.9.9",
+  "mongo": "7.0.16",
+  "bases": {
+    "python": "python:3.13.13-slim-bookworm@sha256:f576b530293e74140ea91d262232648d5c4f45640a95ec447757701bfcacf034",
+    "maven": "maven:3.9.9-eclipse-temurin-8@sha256:4977e75de990c5923bffd540c03c76a91075d07bddd8a42d71126e752a2bd34d",
+    "eclipse-temurin": "eclipse-temurin:8-jre@sha256:acfd157ba9dc5b7cbfd2bd2391bc206a6d23e6ddbba564eb89cf60e77de77831",
+    "mongo": "mongo:7.0.16@sha256:a3ba70fe8da14d155e158245fc89a9dd6adf92ae34976ebce24464a3c1573c78"
+  },
+  "images": {
+    "python": "assessment-python:fixed-v1",
+    "order-builder": "assessment-order-builder:fixed-v1",
+    "java": "eclipse-temurin:8-jre@sha256:acfd157ba9dc5b7cbfd2bd2391bc206a6d23e6ddbba564eb89cf60e77de77831",
+    "mongo": "mongo:7.0.16@sha256:a3ba70fe8da14d155e158245fc89a9dd6adf92ae34976ebce24464a3c1573c78"
+  },
+  "pythonModules": [
+    "annotated_doc",
+    "annotated_types",
+    "anyio",
+    "certifi",
+    "click",
+    "fastapi",
+    "h11",
+    "httpcore",
+    "httpx",
+    "idna",
+    "opentelemetry",
+    "pydantic",
+    "pydantic_core",
+    "starlette",
+    "typing_inspection",
+    "typing_extensions",
+    "uvicorn"
+  ]
+}

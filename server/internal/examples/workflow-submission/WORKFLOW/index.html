@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>订单售后助手 · 示例提交</title>
+<style>body{font:16px system-ui;background:#f1f5f9;color:#172033;max-width:820px;margin:40px auto;padding:20px}main{background:white;border-radius:16px;padding:28px}input,textarea,button{font:inherit;padding:10px;margin:6px 0;box-sizing:border-box}input,textarea{width:100%}button{background:#2346a0;color:white;border:0;border-radius:6px;cursor:pointer}button:disabled{opacity:.45}pre{white-space:pre-wrap;background:#f3f6fa;padding:16px}label{display:block}#messages{white-space:pre-wrap;line-height:1.8}small{color:#526070}</style>
+<main><h1>订单售后申请助手</h1><small>示例工程 · 使用虚构订单 · 仅创建申请，不执行退款</small>
+<label>演示身份令牌<input id="token" type="password" autocomplete="off" placeholder="粘贴本地业务服务输出的 Alice 令牌"></label>
+<button id="start">新建会话</button><div id="messages" role="log" aria-live="polite"></div>
+<label>描述订单问题<textarea id="message" rows="3" placeholder="订单号、发生了什么问题……"></textarea></label>
+<button id="send" disabled>发送</button><pre id="draft" hidden></pre><button id="confirm" hidden>确认提交申请</button><p id="status" role="status"></p></main>
+<script>
+let session=null,draft=null,confirmKey=null,busy=false;
+const el=id=>document.getElementById(id);
+async function call(path,body,key){const r=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+el('token').value,...(key?{'Idempotency-Key':key}:{})},body:JSON.stringify(body)});const data=await r.json();if(!r.ok)throw Error(data.code||r.status);return data;}
+function show(data){session=data.session_id;draft=data.draft;el('messages').textContent+='\n助手：'+data.message;el('status').textContent='状态：'+data.status+(data.ticket?' · 工单 '+data.ticket.ticket_id:'');el('draft').hidden=!draft;el('draft').textContent=draft?JSON.stringify(draft,null,2):'';el('confirm').hidden=!draft||!['awaiting_confirmation','unavailable'].includes(data.status);}
+async function act(fn){if(busy)return;busy=true;for(const id of ['start','send','confirm'])el(id).disabled=true;try{await fn();}catch(e){el('status').textContent='操作未完成：'+e.message;}finally{busy=false;el('start').disabled=false;el('send').disabled=!session;el('confirm').disabled=false;}}
+el('start').onclick=()=>act(async()=>{session=null;draft=null;confirmKey=null;el('messages').textContent='';el('draft').hidden=true;el('confirm').hidden=true;show(await call('/sessions',{}));});
+el('send').onclick=()=>act(async()=>{const message=el('message').value;if(!message.trim())return;el('messages').textContent+='\n你：'+message;confirmKey=null;show(await call('/sessions/'+session+'/messages',{message}));el('message').value='';});
+el('confirm').onclick=()=>act(async()=>{confirmKey=confirmKey||crypto.randomUUID();show(await call('/sessions/'+session+'/confirm',{draft_id:draft.draft_id},confirmKey));});
+</script></html>

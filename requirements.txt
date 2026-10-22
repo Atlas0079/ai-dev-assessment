@@ -1,2 +1,0 @@
-# Trusted MongoDB inspection and failure injection; HTTP checks use the standard library.
-pymongo==4.11.3

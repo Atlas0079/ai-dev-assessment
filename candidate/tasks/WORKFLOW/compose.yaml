@@ -1,0 +1,45 @@
+{
+  "services": {
+    "business": {
+      "build": {
+        "context": "./devtools",
+        "network": "none"
+      },
+      "ports": [
+        "127.0.0.1:8091:8091"
+      ],
+      "platform": "linux/amd64"
+    },
+    "public-check": {
+      "image": "python:3.13.13-slim-bookworm@sha256:f576b530293e74140ea91d262232648d5c4f45640a95ec447757701bfcacf034",
+      "working_dir": "/tools",
+      "volumes": [
+        "./devtools:/tools:ro"
+      ],
+      "profiles": [
+        "check"
+      ],
+      "extra_hosts": [
+        "host.docker.internal:host-gateway"
+      ],
+      "environment": {
+        "WORKFLOW_USER_TOKEN": "${WORKFLOW_USER_TOKEN:-}"
+      },
+      "entrypoint": [
+        "python",
+        "-m",
+        "workflow_support.self_check"
+      ],
+      "command": [
+        "--url",
+        "http://host.docker.internal:8080",
+        "--business-url",
+        "http://business:8091",
+        "--order",
+        "${WORKFLOW_ORDER_ID:-}"
+      ],
+      "platform": "linux/amd64",
+      "pull_policy": "never"
+    }
+  }
+}

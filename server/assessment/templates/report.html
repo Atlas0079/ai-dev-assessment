@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; font-src 'none'; base-uri 'none'">
+  <title>$title · $candidate</title>
+  <style>$css</style>
+</head>
+<body>
+  <header class="report-header">
+    <div><p class="eyebrow">招聘评测</p><h1>$title</h1><p class="candidate">$candidate <span>提交 v$submission · 第 $attempt 次执行</span></p></div>
+    <div class="report-state">$state</div>
+  </header>
+  <section class="overview">$overview</section>
+  <section class="attention"><div class="section-title"><h2>结果与处理事项</h2></div>$attention</section>
+  $checks
+  <section class="scope">$scope</section>
+  <div class="subjective"><span>主观评价：未启用</span><span>LLM 建议：<span class="blank-advice"></span></span></div>
+  <section class="$appendix_class"><div class="appendix-label">附录</div>$appendix</section>
+</body>
+</html>

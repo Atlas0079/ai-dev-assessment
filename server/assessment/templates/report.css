@@ -1,0 +1,61 @@
+@page{size:A4;margin:15mm 16mm 18mm}
+*{box-sizing:border-box}
+html{font-family:"Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;color:#263445;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-size:9.2pt;line-height:1.65;margin:0}
+h1,h2,h3,p{margin:0}
+h1{font-size:23pt;line-height:1.35;letter-spacing:-.4px;font-weight:700;margin:5px 0 11px;color:#172c47}
+h2{font-size:12pt;line-height:1.5;color:#20344f;font-weight:650}
+h3{font-size:9.5pt;line-height:1.65;font-weight:600;overflow-wrap:anywhere}
+.report-header{display:flex;justify-content:space-between;gap:15px;border-top:4px solid #2e527c;padding-top:15px;padding-bottom:19px;border-bottom:1px solid #dfe6ee}
+.eyebrow{font-size:8pt;color:#64768d;letter-spacing:1px}
+.candidate{font-size:12pt;font-weight:650;color:#233d5e;overflow-wrap:anywhere}
+.candidate span{font-size:8.5pt;color:#738096;font-weight:400;margin-left:12px}
+.report-state{padding-top:8px;flex-shrink:0}
+.badge{display:inline-block;font-size:8pt;font-weight:550;padding:3px 9px;border-radius:4px;white-space:nowrap;background:#eff3f7;color:#56677d;vertical-align:middle}
+.badge.pass{background:#eaf4ef;color:#2f7058}.badge.fail{background:#fcEEEE;color:#a43f43}.badge.pending{background:#fff3dc;color:#986622}.badge.error{background:#f0ebfa;color:#75529a}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:19px 0 17px}
+.metric{border:1px solid #e1e7ee;border-radius:6px;padding:10px 14px;background:#fbfcfe}
+.metric>span{display:block;font-size:8pt;color:#718096;margin-bottom:2px}
+.metric strong{font-size:24pt;line-height:1.3;letter-spacing:-.8px;font-weight:650}.metric small{font-size:8pt;color:#93a0b1;margin-left:6px}
+.pass{color:#34795e}.fail{color:#ae494d}.pending{color:#996722}.error{color:#79569f}
+.metric.zero strong,.number.zero{color:#8996a7}
+.empty-result{display:flex;align-items:center;gap:14px;background:#f6f8fb;border:1px solid #e2e8f0;border-radius:5px;padding:14px 16px;margin:18px 0;font-size:9pt}
+.empty-result strong{color:#536781}.empty-result span{color:#7c899a;font-size:8pt}
+table{border-collapse:collapse;width:100%;table-layout:fixed}
+thead{display:table-header-group}tr{break-inside:avoid}
+th{text-align:left;color:#6c7d91;font-weight:500;font-size:8pt;background:#f4f7fa}
+th,td{padding:9px 10px;border-bottom:1px solid #e6ebf1;vertical-align:top}
+.task-table{font-size:8.5pt}.task-table th:first-child{width:34%}.task-table th:nth-child(2){width:22%}
+.task-table th:nth-child(n+3){width:11%;text-align:center}.number{text-align:center;font-weight:650}
+.table-subtitle{display:block;font-size:8pt;color:#718096;margin-top:1px}
+.scope-line{font-size:8pt;color:#7c899a;margin:8px 0}
+.notice{font-size:8pt;line-height:1.7;background:#fff8e9;border-left:3px solid #c79a4b;padding:7px 11px;color:#856323;margin-top:8px;overflow-wrap:anywhere}
+.section-title{display:flex;justify-content:space-between;align-items:center;margin:22px 0 10px;break-after:avoid}
+.issue-card,.case-card{border:1px solid #e2e8f0;border-left:3px solid #b9924a;border-radius:5px;padding:12px 14px;margin:0 0 11px;break-inside:avoid;color:#263445}
+.issue-card{background:#fffaf0}.case-card.fail{border-left-color:#be6668}.case-card.error{border-left-color:#9173b4}
+.card-heading{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px}.card-heading .badge{margin-top:1px;flex-shrink:0}
+.action{margin-top:8px;font-size:9pt}.action>span{display:block;font-size:8pt;color:#927338;margin-bottom:2px}
+.fine{font-size:7.5pt;color:#79879a;margin-top:5px;overflow-wrap:anywhere}
+.mono,.evidence-ids code{font-family:"SFMono-Regular",Consolas,"Noto Sans Mono",monospace;font-size:7.5pt;overflow-wrap:anywhere}
+.observation>span{font-size:8pt;color:#7d899a}.observation p{margin-top:2px;font-size:9pt;white-space:pre-wrap;overflow-wrap:anywhere}
+.evidence-ref{display:inline-block;color:#52749a;font-size:8pt;text-decoration:none;margin-top:8px}
+.clear-result{border-left:3px solid #79a58f;padding:10px 13px;background:#f1f7f4;color:#396e56;font-size:9pt}
+.muted{color:#7c899a;font-size:8.5pt;margin:7px 0}
+.check-table{font-size:8pt;line-height:1.65}.check-table td{padding:6px 9px;overflow-wrap:anywhere;border:1px solid #e6ebf1}
+.check-table thead th{background:white;border:0;padding:0}.check-table .section-title{margin:18px 0 10px}
+.check-table tr:nth-child(2n){background:#f8fafc}
+.case-id{font-size:7.5pt;color:#607d9d;display:inline-block;margin-right:7px;font-weight:600}
+.scope-row{display:flex;gap:14px;font-size:8pt;border-top:1px solid #e6ebf1;padding:8px 0;color:#788698;break-inside:avoid}
+.scope-row strong{color:#536982;min-width:72px;padding-top:1px}.scope-row ul{margin:0;padding-left:17px}.scope-row li{padding:1px 0}
+.subjective{margin-top:16px;padding-top:10px;border-top:1px solid #dfe6ee;font-size:8pt;color:#79879a;display:flex;gap:30px}
+.blank-advice{display:inline-block;width:100px}
+.appendix{margin-top:24px}.appendix-label{font-size:8pt;color:#6d8098;border-top:3px solid #d9e3ef;padding-top:11px;margin-bottom:5px;letter-spacing:1px;break-after:avoid}
+.appendix.continuous{break-before:auto;margin-top:24px}
+.appendix .section-title{margin-top:12px}
+.audit-table{font-size:7.5pt;line-height:1.55}.audit-table th{width:18%;background:#f5f8fb;font-size:7.5pt}.audit-table td{width:32%;overflow-wrap:anywhere;font-family:inherit}.audit-table th,.audit-table td{padding:5px 8px}
+.evidence-entry{margin-bottom:16px;break-inside:avoid}.evidence-entry h3{break-after:avoid;color:#355475}
+.http-line{display:flex;align-items:baseline;gap:10px;margin:8px 0;font-size:8pt;color:#456180}.http-line code{overflow-wrap:anywhere;font-size:7.5pt}.http-line>span{margin-left:auto;white-space:nowrap;color:#7b899c}
+.payload{display:flex;align-items:baseline;gap:10px;margin:5px 0}.payload>span{font-size:7.5pt;min-width:30px;color:#8490a0}.payload pre{flex:1;min-width:0;margin:0;padding:6px 9px}
+pre{font-family:"SFMono-Regular",Consolas,"Noto Sans CJK SC","Microsoft YaHei",monospace;font-size:7.5pt;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;background:#f5f7fa;border:1px solid #e1e7ef;border-radius:4px;padding:12px;margin:9px 0;color:#40556f}
+.evidence-ids{font-size:7pt;color:#79879a;overflow-wrap:anywhere}.evidence-ids>span{display:block;margin-bottom:4px}.evidence-ids code{display:inline-block;font-size:6.8pt;margin-right:7px;max-width:100%}
+@media screen{body{max-width:178mm;margin:24px auto;padding:20px 12px}.appendix{margin-top:35px}}

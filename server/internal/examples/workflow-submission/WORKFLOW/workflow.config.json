@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "llm": {
+    "protocol": "chat_completions",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "api_key_env": "WORKFLOW_LLM_API_KEY"
+  },
+  "business": {"base_url": "http://127.0.0.1:8091"},
+  "limits": {"max_model_calls_per_message": 6, "model_timeout_seconds": 45}
+}
